@@ -1,0 +1,28 @@
+✔ dashboard totaliza registros reais e mantém visitas de inativos (3.49619ms)
+✔ dashboard vazio não inventa visitas (0.221153ms)
+✔ QR tem o mesmo contrato do Flutter (0.201949ms)
+✔ rejeita ID "" (0.355872ms)
+✔ rejeita ID "../x" (0.138364ms)
+✔ rejeita ID "x/y" (0.118973ms)
+✔ rejeita ID "id_com_underscore" (0.097247ms)
+✔ rejeita ID "robótica" (0.118595ms)
+✔ rejeita ID "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" (0.120535ms)
+✔ rejeita ID "id\n" (0.203735ms)
+✔ valida estande completo (0.31285ms)
+✔ rejeita nome em branco (0.195582ms)
+✔ rejeita descricao em branco (0.066032ms)
+✔ rejeita localizacao em branco (0.054954ms)
+✔ limita nome a 100 (0.118224ms)
+✔ limita descricao a 500 (0.071811ms)
+✔ limita localizacao a 150 (0.063993ms)
+✔ credenciais inválidas têm mensagem clara (0.157517ms)
+✔ permissão negada tem mensagem clara (0.187728ms)
+✔ falta de rede tem mensagem clara (0.08888ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15.274208

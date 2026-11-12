@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Circuito de Descobertas, OU=Projeto Academico, O=CESUPA, L=Belem, ST=PA, C=BR
+Signer #1 certificate SHA-256 digest: c11c50e2f82a1445ba1f9a00ffc7b622d0b5da28a547b0b89f4b3e33b98e16bc
+Signer #1 certificate SHA-1 digest: 5ba5127d85d81d922716d33d23601a55e9e5edbc
+Signer #1 certificate MD5 digest: 26e48a1f2a32cd619948308a7bde851f
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 2341c950abac5e757b3bee0b13abf073951f4fb7de6b10777bd69230bae66293
+Signer #1 public key SHA-1 digest: ffa50b54e13eb107cdfa5208f37260a2bb1a7d27
+Signer #1 public key MD5 digest: 3528367f49d045e8108c0ad4ec162f9e

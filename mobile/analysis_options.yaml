@@ -1,0 +1,8 @@
+include: package:flutter_lints/flutter.yaml
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+linter:
+  rules:
+    unawaited_futures: true

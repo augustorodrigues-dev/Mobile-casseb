@@ -1,0 +1,13 @@
+
+> circuito-admin@1.0.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /home/augusto/Desktop/Codar/mobile/Circuito-de-Descobertas/admin-web
+
+
+ Test Files  2 passed (2)
+      Tests  19 passed (19)
+   Start at  08:39:06
+   Duration  750ms (transform 55ms, setup 22ms, import 87ms, tests 77ms, environment 932ms)
+

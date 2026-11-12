@@ -1,0 +1,1 @@
+{"version":"0.2.0","configurations":[{"name":"Circuito • Android / Firebase","request":"launch","type":"dart","cwd":"${workspaceFolder}/mobile","program":"lib/main.dart"},{"name":"Circuito • Android / Emuladores Firebase","request":"launch","type":"dart","cwd":"${workspaceFolder}/mobile","program":"lib/main.dart","toolArgs":["--dart-define=USE_FIREBASE_EMULATORS=true"]}]}

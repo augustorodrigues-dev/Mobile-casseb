@@ -1,0 +1,58 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function admin() {
+      return signedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+    function validId(id) {
+      return id is string && id.matches('^[A-Za-z0-9-]{1,128}$');
+    }
+    function text(value, max) {
+      return value is string && value.size() >= 1 && value.size() <= max
+        && !value.matches('^\\s*$');
+    }
+    function validStand(data) {
+      return data.keys().hasAll(['nome', 'descricao', 'localizacao', 'ativo', 'criadoEm', 'atualizadoEm'])
+        && data.keys().hasOnly(['nome', 'descricao', 'localizacao', 'ativo', 'criadoEm', 'atualizadoEm'])
+        && text(data.nome, 100) && text(data.descricao, 500) && text(data.localizacao, 150)
+        && data.ativo is bool && data.criadoEm is timestamp && data.atualizadoEm is timestamp;
+    }
+    match /admins/{uid} {
+      allow get: if signedIn() && (request.auth.uid == uid || admin());
+      allow list: if admin();
+      // Privilégios são atribuídos somente pelo console/Admin SDK confiável.
+      allow write: if false;
+    }
+    match /estandes/{id} {
+      // Consulta pontual permite explicar um QR de estande desativado.
+      allow get: if signedIn();
+      allow list: if signedIn() && (admin() || resource.data.ativo == true);
+      allow create: if admin() && validId(id) && validStand(request.resource.data)
+        && request.resource.data.criadoEm == request.time
+        && request.resource.data.atualizadoEm == request.time;
+      allow update: if admin() && validId(id) && validStand(request.resource.data)
+        && request.resource.data.criadoEm == resource.data.criadoEm
+        && request.resource.data.atualizadoEm == request.time;
+      allow delete: if false;
+    }
+    match /checkins/{id} {
+      // O get deve funcionar também quando o documento ainda não existe.
+      // UIDs gerados pelo Firebase Auth anônimo usam caracteres alfanuméricos.
+      allow get: if signedIn() && (admin() || (
+        request.auth.uid.matches('^[A-Za-z0-9-]+$')
+        && id.matches('^' + request.auth.uid + '_[A-Za-z0-9-]{1,128}$')));
+      allow list: if signedIn() && (admin() || resource.data.visitanteId == request.auth.uid);
+      allow create: if signedIn()
+        && request.resource.data.keys().hasAll(['visitanteId', 'estandeId', 'criadoEm'])
+        && request.resource.data.keys().hasOnly(['visitanteId', 'estandeId', 'criadoEm'])
+        && request.resource.data.visitanteId == request.auth.uid
+        && validId(request.resource.data.estandeId)
+        && id == request.auth.uid + '_' + request.resource.data.estandeId
+        && request.resource.data.criadoEm == request.time
+        && exists(/databases/$(database)/documents/estandes/$(request.resource.data.estandeId))
+        && get(/databases/$(database)/documents/estandes/$(request.resource.data.estandeId)).data.ativo == true;
+      allow update, delete: if false;
+    }
+  }
+}

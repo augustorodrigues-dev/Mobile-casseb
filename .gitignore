@@ -1,0 +1,31 @@
+node_modules/
+dist/
+coverage/
+.firebase/
+*-debug.log*
+.env
+.env.local
+.env.*.local
+!*.example
+mobile/.dart_tool/
+mobile/build/
+mobile/.flutter-plugins*
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/android/key.properties
+mobile/android/app/google-services.json
+mobile/lib/firebase_options.dart
+*.jks
+*.keystore
+*.p12
+*.pem
+.DS_Store
+# Imagens negativas produzidas somente durante os ensaios
+admin-web/qr-externo.png
+admin-web/qr-inexistente.png
+# Credenciais administrativas locais da demonstração
+/docs/ACESSO_LOCAL.md
+
+# Pacote privado compartilhado separadamente do repositório
+/arquivos-locais/
+/arquivos-locais.zip

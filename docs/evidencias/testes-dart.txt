@@ -1,0 +1,40 @@
+PASS QR canônico extrai identificador
+PASS QR de outro sistema é rejeitado: 
+PASS QR de outro sistema é rejeitado: https://exemplo.com
+PASS QR de outro sistema é rejeitado: outro://estande/robotica
+PASS QR de outro sistema é rejeitado: CIRCUITO://estande/robotica
+PASS ID inválido é rejeitado: 
+PASS ID inválido é rejeitado: ../robotica
+PASS ID inválido é rejeitado: x/y
+PASS ID inválido é rejeitado: id?x=1
+PASS ID inválido é rejeitado: id#x
+PASS ID inválido é rejeitado: %72obotica
+PASS ID inválido é rejeitado: id_com_underscore
+PASS ID inválido é rejeitado: id com espaco
+PASS ID inválido é rejeitado: robótica
+PASS ID inválido é rejeitado:  id
+PASS ID inválido é rejeitado: id
+
+PASS ID inválido é rejeitado: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+PASS ID de 128 caracteres é aceito
+PASS Missão desativada não destaca estandes
+PASS Missão ativa filtra IDs inexistentes e inativos
+PASS JSON inválido mantém missão utilizável: 
+PASS JSON inválido mantém missão utilizável: {
+PASS JSON inválido mantém missão utilizável: {}
+PASS JSON inválido mantém missão utilizável: null
+PASS JSON inválido mantém missão utilizável: [1]
+PASS JSON inválido mantém missão utilizável: ["../x"]
+PASS JSON inválido mantém missão utilizável: "robotica"
+PASS Configuração vazia é válida
+PASS Lista remota excessiva é rejeitada
+PASS Check-in gera evento somente após commit
+PASS Duplicidade não gera outro evento
+PASS Leituras simultâneas são bloqueadas e o scanner é liberado
+PASS Falha VisitFailureCode.inactive não envia Analytics e permite nova leitura
+PASS Falha VisitFailureCode.offline não envia Analytics e permite nova leitura
+PASS Falha VisitFailureCode.denied não envia Analytics e permite nova leitura
+PASS Falha VisitFailureCode.notFound não envia Analytics e permite nova leitura
+PASS Falha VisitFailureCode.writeFailed não envia Analytics e permite nova leitura
+PASS QR inválido e sessão vazia não consultam o banco
+38 aprovados; 0 falharam.

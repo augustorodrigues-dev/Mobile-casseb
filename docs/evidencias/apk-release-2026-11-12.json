@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-12",
+  "file": "mobile/build/app/outputs/flutter-apk/app-release.apk",
+  "sizeBytes": 66635057,
+  "sha256": "ad99ed9380e32e00f2239dafd78bf0c1f742a9b1080f3f3fbf7f2c6833497bc1",
+  "signatureVerified": true,
+  "certificateMatchesReleaseKeystore": true,
+  "certificateSha256": "c11c50e2f82a1445ba1f9a00ffc7b622d0b5da28a547b0b89f4b3e33b98e16bc",
+  "packageMetadata": "package: name='circuito.descobertas' versionCode='1' versionName='1.0.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'",
+  "distributionStatus": "pending; no upload or tester install performed"
+}

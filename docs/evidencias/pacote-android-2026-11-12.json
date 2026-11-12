@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-12",
+  "applicationId": "circuito.descobertas",
+  "namespace": "circuito.descobertas",
+  "mainActivity": "circuito.descobertas.MainActivity",
+  "firebaseJsonPackageMatches": true,
+  "firebaseJsonModified": false,
+  "signingKeyModified": false,
+  "flutterPubGet": "passed",
+  "flutterAnalyze": "passed, no issues",
+  "flutterTest": {
+    "passed": 40,
+    "failed": 0
+  },
+  "androidBuild": "passed",
+  "apk": "mobile/build/app/outputs/flutter-apk/app-debug.apk",
+  "generatedManifestMatches": true,
+  "generatedGoogleServicesMatches": true,
+  "adbInstall": "Success",
+  "androidLaunch": "Status: ok",
+  "activity": "circuito.descobertas.MainActivity",
+  "device": "emulator-5554",
+  "firestoreStandsVisible": [
+    "Amazônia Sustentável",
+    "Jogos Educativos",
+    "Laboratório de Robótica"
+  ]
+}

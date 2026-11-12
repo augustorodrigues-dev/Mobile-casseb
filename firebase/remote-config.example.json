@@ -1,0 +1,7 @@
+{
+  "conditions": [],
+  "parameters": {
+    "missao_ativa": {"defaultValue": {"value": "false"}, "valueType": "BOOLEAN", "description": "Ativa o banner e a tela da missão surpresa."},
+    "estandes_destaque": {"defaultValue": {"value": "[]"}, "valueType": "STRING", "description": "Array JSON com os IDs reais dos estandes participantes."}
+  }
+}
